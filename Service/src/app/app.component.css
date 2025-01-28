@@ -1,0 +1,84 @@
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  color: #912128; /* Updated to #912128 */
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-brand i {
+  color: blue; /* Updated to #912128 */
+}
+
+.nav-item {
+  margin: 0 0.5rem;
+}
+
+.nav-link {
+  color: var(--text-primary);
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link i {
+  font-size: 1.1rem;
+  color: #912128; /* Updated to #912128 */
+}
+
+.nav-link:hover {
+  background-color: rgba(145, 33, 40, 0.1); /* Updated to use #912128 with opacity */
+  color: #912128; /* Updated to #912128 */
+}
+
+.nav-link.active {
+  background-color: #912128; /* Updated to #912128 */
+  color: white !important;
+}
+
+.nav-link.active i {
+  color: white;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+  color: #912128; /* Updated to #912128 */
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    padding: 1rem 0;
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem !important;
+  }
+}
+
+.container {
+  padding: 0 15px;
+}

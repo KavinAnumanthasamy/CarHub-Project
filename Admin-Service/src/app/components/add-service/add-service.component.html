@@ -1,0 +1,72 @@
+<div class="page-container">
+  <div class="form-container">
+    <div class="header-section">
+      <h2 class="form-title">Add New Service</h2>
+      <p class="form-subtitle">Create a new service for your customers</p>
+    </div>
+    
+    <!-- Success Message -->
+    <div class="alert alert-success" *ngIf="successMessage">
+      {{ successMessage }}
+    </div>
+
+    <!-- Error Message -->
+    <div class="alert alert-danger" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+
+    <form [formGroup]="serviceForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Service Name</label>
+        <input 
+          type="text" 
+          id="name" 
+          class="form-control"
+          formControlName="name"
+          placeholder="Enter service name">
+        <div class="validation-error" *ngIf="serviceForm.get('name')?.touched && serviceForm.get('name')?.invalid">
+          <span *ngIf="serviceForm.get('name')?.errors?.['required']">Service name is required</span>
+          <span *ngIf="serviceForm.get('name')?.errors?.['minlength']">Name must be at least 3 characters</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea 
+          id="description" 
+          class="form-control"
+          formControlName="description"
+          rows="4"
+          placeholder="Enter service description"></textarea>
+        <div class="validation-error" *ngIf="serviceForm.get('description')?.touched && serviceForm.get('description')?.invalid">
+          <span *ngIf="serviceForm.get('description')?.errors?.['required']">Description is required</span>
+          <span *ngIf="serviceForm.get('description')?.errors?.['minlength']">Description must be at least 10 characters</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price (₹)</label>
+        <div class="price-input-container">
+          <span class="currency-symbol">₹</span>
+          <input 
+            type="number" 
+            id="price" 
+            class="form-control price-input"
+            formControlName="price"
+            placeholder="Enter price">
+        </div>
+        <div class="validation-error" *ngIf="serviceForm.get('price')?.touched && serviceForm.get('price')?.invalid">
+          <span *ngIf="serviceForm.get('price')?.errors?.['required']">Price is required</span>
+          <span *ngIf="serviceForm.get('price')?.errors?.['min']">Price must be greater than 0</span>
+        </div>
+      </div>
+
+      <button 
+        type="submit" 
+        class="submit-button"
+        [disabled]="!serviceForm.valid || isSubmitting">
+        {{ isSubmitting ? 'Adding Service...' : 'Add Service' }}
+      </button>
+    </form>
+  </div>
+</div> 

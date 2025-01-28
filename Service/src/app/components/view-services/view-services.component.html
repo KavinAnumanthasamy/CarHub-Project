@@ -1,0 +1,45 @@
+<div class="page-container">
+  <div class="services-container">
+    <div class="header-section">
+      <h2 class="section-title">Available Services</h2>
+      <p class="section-subtitle">Browse our service offerings</p>
+    </div>
+
+    <!-- Loading State -->
+    <div class="loading-container" *ngIf="isLoading">
+      <div class="spinner"></div>
+      <p>Loading services...</p>
+    </div>
+
+    <!-- Error Message -->
+    <div class="error-message" *ngIf="errorMessage">
+      {{ errorMessage }}
+      <button class="btn btn-primary retry-button" (click)="loadServices()">
+        Retry
+      </button>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="services-grid" *ngIf="!isLoading && !errorMessage && services.length > 0">
+      <div class="service-card" *ngFor="let service of services">
+        <div class="service-header">
+          <h3 class="service-title">{{service.name}}</h3>
+        </div>
+        
+        <p class="service-description">{{service.description}}</p>
+        
+        <div class="service-footer">
+          <span class="service-price">₹{{service.price}}</span>
+          <button class="btn btn-primary book-btn" (click)="bookService(service)">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- No Services Message -->
+    <div class="no-services" *ngIf="!isLoading && !errorMessage && services.length === 0">
+      <p>No services available at the moment.</p>
+    </div>
+  </div>
+</div> 

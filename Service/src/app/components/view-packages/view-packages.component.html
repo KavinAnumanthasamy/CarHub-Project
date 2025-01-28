@@ -1,0 +1,56 @@
+<div class="page-container">
+  <div class="packages-container">
+    <div class="header-section">
+      <h2 class="section-title">Service Packages</h2>
+      <p class="section-subtitle">Browse our available service packages</p>
+    </div>
+
+    <!-- Loading State -->
+    <div class="loading-container" *ngIf="isLoading">
+      <div class="spinner"></div>
+      <p>Loading packages...</p>
+    </div>
+
+    <!-- Error Message -->
+    <div class="error-message" *ngIf="errorMessage">
+      {{ errorMessage }}
+      <button class="btn btn-primary retry-button" (click)="loadPackages()">
+        Retry
+      </button>
+    </div>
+
+    <!-- Packages Grid -->
+    <div class="packages-grid" *ngIf="!isLoading && !errorMessage && packages.length > 0">
+      <div class="package-card" *ngFor="let package of packages">
+        <div class="package-header">
+          <h3 class="package-title">{{package.name}}</h3>
+        </div>
+        
+        <p class="package-description">{{package.description}}</p>
+        <div class="package-duration">Duration: {{package.duration}} hours</div>
+        
+        <div class="services-list">
+          <h4>Included Services:</h4>
+          <ul>
+            <li *ngFor="let service of package.services">
+              <span class="service-name">{{service.name}}</span>
+              <span class="service-price">₹{{service.price}}</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="package-footer">
+          <div class="total-price">Total Price: ₹{{package.totalPrice}}</div>
+          <button class="btn btn-primary book-btn" (click)="bookPackage(package)">
+            Book Package
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- No Packages Message -->
+    <div class="no-packages" *ngIf="!isLoading && !errorMessage && packages.length === 0">
+      <p>No packages available at the moment.</p>
+    </div>
+  </div>
+</div> 

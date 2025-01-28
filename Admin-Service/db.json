@@ -1,0 +1,237 @@
+{
+  "services": [
+    {
+      "id": "1",
+      "name": "Oil Change",
+      "description": "Complete oil change service with premium quality oil",
+      "price": 2500
+    },
+    {
+      "id": "2",
+      "name": "Brake Service",
+      "description": "Comprehensive brake inspection and service",
+      "price": 3500
+    },
+    {
+      "id": "3",
+      "name": "Car Wash",
+      "description": "Basic exterior car wash",
+      "price": 300
+    },
+    {
+      "id": "4",
+      "name": "Tire Cleaning",
+      "description": "Deep cleaning of tires",
+      "price": 200
+    },
+    {
+      "id": "5",
+      "name": "Seat Shampooing",
+      "description": "Deep cleaning of car seats with shampoo",
+      "price": 800
+    },
+    {
+      "id": "6",
+      "name": "Dashboard Polishing",
+      "description": "Cleaning and polishing of the dashboard",
+      "price": 500
+    },
+    {
+      "id": "7",
+      "name": "Floor Mat Cleaning",
+      "description": "Deep cleaning of floor mats",
+      "price": 700
+    },
+    {
+      "id": "8",
+      "name": "Wax Polishing",
+      "description": "Exterior wax polishing for shine and protection",
+      "price": 2700
+    },
+    {
+      "id": "acaa",
+      "name": "car wash",
+      "description": "carwash+pati tinkering",
+      "price": 3000
+    },
+    {
+      "id": "7pzulu0my",
+      "name": "car patti",
+      "description": "looks new ",
+      "price": 60000
+    },
+    {
+      "id": "rz27mue50",
+      "name": "washing",
+      "description": "full wash ",
+      "price": 6000
+    },
+    {
+      "id": "f6zgznww2",
+      "name": "car wash",
+      "description": "body wash ",
+      "price": 2700
+    }
+  ],
+  "packages": [
+    {
+      "id": "1",
+      "name": "Basic Maintenance",
+      "description": "Essential car maintenance package",
+      "totalPrice": 6000,
+      "duration": 2,
+      "services": [
+        {
+          "id": "1",
+          "name": "Oil Change",
+          "description": "Complete oil change service",
+          "price": 2500
+        },
+        {
+          "id": "2",
+          "name": "Brake Service",
+          "description": "Brake inspection and service",
+          "price": 3500
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Interior Detailing Package",
+      "description": "Comprehensive cleaning of the car interior",
+      "totalPrice": 2000,
+      "duration": 2,
+      "services": [
+        {
+          "id": 5,
+          "name": "Seat Shampooing",
+          "description": "Deep cleaning of car seats with shampoo",
+          "price": 800
+        },
+        {
+          "id": 6,
+          "name": "Dashboard Polishing",
+          "description": "Cleaning and polishing of the dashboard",
+          "price": 500
+        },
+        {
+          "id": 7,
+          "name": "Floor Mat Cleaning",
+          "description": "Deep cleaning of floor mats",
+          "price": 700
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Premium Car Care Package",
+      "description": "Full car care with polishing and detailing",
+      "totalPrice": 4000,
+      "duration": 4,
+      "services": [
+        {
+          "id": 1,
+          "name": "Car Wash",
+          "description": "Basic exterior car wash",
+          "price": 300
+        },
+        {
+          "id": 4,
+          "name": "Tire Cleaning",
+          "description": "Deep cleaning of tires",
+          "price": 200
+        },
+        {
+          "id": 5,
+          "name": "Seat Shampooing",
+          "description": "Deep cleaning of car seats with shampoo",
+          "price": 800
+        },
+        {
+          "id": 8,
+          "name": "Wax Polishing",
+          "description": "Exterior wax polishing for shine and protection",
+          "price": 2700
+        }
+      ]
+    },
+    {
+      "id": "60b1",
+      "name": "car wash",
+      "description": "nmbhjh",
+      "duration": 3,
+      "services": [
+        {
+          "id": "5",
+          "name": "Seat Shampooing",
+          "description": "Deep cleaning of car seats with shampoo",
+          "price": 800
+        }
+      ],
+      "totalPrice": 800
+    },
+    {
+      "id": "596b",
+      "name": "full cleaninng",
+      "description": "ac work, basic testiing",
+      "duration": 4,
+      "services": [
+        {
+          "id": "1",
+          "name": "Car Wash",
+          "description": "Basic exterior car wash",
+          "price": 300
+        },
+        {
+          "id": "2",
+          "name": "Interior Vacuuming",
+          "description": "Vacuum cleaning of car interiors",
+          "price": 200
+        },
+        {
+          "id": "3",
+          "name": "Oil Change",
+          "description": "Replacement of synthetic oil",
+          "price": 1500
+        },
+        {
+          "id": "4",
+          "name": "Tire Cleaning",
+          "description": "Deep cleaning of tires",
+          "price": 200
+        },
+        {
+          "id": "5",
+          "name": "Seat Shampooing",
+          "description": "Deep cleaning of car seats with shampoo",
+          "price": 800
+        },
+        {
+          "id": "6",
+          "name": "Dashboard Polishing",
+          "description": "Cleaning and polishing of the dashboard",
+          "price": 500
+        },
+        {
+          "id": "7",
+          "name": "Floor Mat Cleaning",
+          "description": "Deep cleaning of floor mats",
+          "price": 700
+        },
+        {
+          "id": "8",
+          "name": "Wax Polishing",
+          "description": "Exterior wax polishing for shine and protection",
+          "price": 2700
+        },
+        {
+          "id": "acaa",
+          "name": "car wash",
+          "description": "carwash+pati tinkering",
+          "price": 3000
+        }
+      ],
+      "totalPrice": 9900
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarHub</title>
+    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="page-container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="logopic">
+                    <img src="logo.png" alt="Logo">
+                    <div class="logo">CarHub</div>
+                </div>
+                <h1>CAR SERVICES</h1>
+                <p>Transparency in Every Mile</p>
+                <button [routerLink]="['/view-services']">VIEW SERVICE </button>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-us">
+            <div class="about-content">
+                <div class="image-container">
+                    <img src="carmechanic.jpeg" alt="Car Repair">
+                </div>
+                <div class="text-container">
+                    <p>
+                        "We provide a platform that connects you with verified and trusted car service providers. 
+                        Our focus is on transparency, allowing you to browse a wide range of car services with clear, upfront pricing. 
+                        Whether it's regular maintenance, repairs, or specialized services, you can easily compare options, check prices, 
+                        and inquire about what suits your needs—all in one convenient place. 
+                        Experience hassle-free car care with quality assurance and no hidden surprises."
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- What We Offer Section -->
+        <section class="what-we-offer">
+            <h2>WHAT WE OFFER</h2>
+            <div class="offer-cards">
+                <div class="offer-card">
+                    <img src="carrepair.jpg" alt="Maintenance">
+                    <div class="card-content">
+                        <h3>Maintenance</h3>
+                        <p>Regular checkups to maintain your car's high performance</p>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <img src="carrepair.jpg" alt="Repair">
+                    <div class="card-content">
+                        <h3>Repair</h3>
+                        <p>Quality service that guarantees smooth and safe rides.</p>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <img src="carrepair.jpg" alt="Parts/Accessories">
+                    <div class="card-content">
+                        <h3>Parts/Accessories</h3>
+                        <p>Interior parts and premium exteriors for standout style</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="centered-content">
+                <h1>Transparent Prices, Trusted Services</h1>
+            </div>
+            <p class="text-center">Experience Excellence, where every service is crafted with care, providing transparent, dependable solutions for your car.</p>
+            <br>
+            <br>
+            <br>
+
+
+            <div class="features">
+                <div class="feature">
+                    <img src="transperency.png" alt="Transparency Icon">
+                    <h3>Transparency</h3>
+                    <p>Clear prices, no surprises</p>
+                </div>
+                <div class="feature">
+                    <img src="Quality Assurance.png" alt="Quality Icon">
+                    <h3>Quality Assurance</h3>
+                    <p>Verified services you can trust</p>
+                </div>
+                <div class="feature">
+                    <img src="User Convenience.png" alt="Convenience Icon">
+                    <h3>User Convenience</h3>
+                    <p>Seamless solutions at your fingertips</p>
+                </div>
+                <div class="feature">
+                    <img src="Accountability.png" alt="Accountability Icon">
+                    <h3>Accountability</h3>
+                    <p>We stand by every service, every time</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="testimonials-header">
+                    <h2>WHAT OUR CLIENTS SAY</h2>
+                    <p class="subtitle">Real experiences from our valued customers</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">"I've never experienced such transparent pricing and quality service. The booking process was smooth, and my car was taken care of quickly. Highly recommend!"</p>
+                            <div class="testimonial-footer">
+                                <div class="client-info">
+                                    <div class="client-avatar">
+                                        <i class="fas fa-user-circle"></i>
+                                    </div>
+                                    <div class="client-details">
+                                        <h4 class="client-name">Rajesh Kumar</h4>
+                                        <p class="client-designation">Regular Customer</p>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">"I was impressed with the level of professionalism and honesty. The prices were upfront, and the service was top-notch. Will definitely come back!"</p>
+                            <div class="testimonial-footer">
+                                <div class="client-info">
+                                    <div class="client-avatar">
+                                        <i class="fas fa-user-circle"></i>
+                                    </div>
+                                    <div class="client-details">
+                                        <h4 class="client-name">Somnath Patel</h4>
+                                        <p class="client-designation">Business Owner</p>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">"From browsing services to making an inquiry, the entire experience was easy and straightforward. Got my car serviced with no hidden charges!"</p>
+                            <div class="testimonial-footer">
+                                <div class="client-info">
+                                    <div class="client-avatar">
+                                        <i class="fas fa-user-circle"></i>
+                                    </div>
+                                    <div class="client-details">
+                                        <h4 class="client-name">Fiya Singh</h4>
+                                        <p class="client-designation">Car Enthusiast</p>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer-section">
+            <div class="footer-columns">
+                <!-- Car Hub Column -->
+                <div class="footer-column">
+                    <h3>Car Hub</h3>
+                    <p>Explore a wide range of cars from trusted dealers near you. Our hub is the best place to find your next ride!</p>
+                </div>
+
+                <!-- Contact Us Column -->
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Email: supportcarhub.com</p>
+                    <p>Phone: +1 123 456 7890</p>
+                    <p>Address: 1234 Car Lane, Auto City, USA</p>
+                </div>
+            </div>
+
+            <!-- Stay Connected Section -->
+            <div class="stay-connected">
+                <div class="social-icons">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="copyright">
+                © 2025 Car Hub. All Rights Reserved.
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

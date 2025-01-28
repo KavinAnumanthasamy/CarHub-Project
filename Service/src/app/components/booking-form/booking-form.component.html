@@ -1,0 +1,53 @@
+<div class="booking-form-container">
+  <h2 mat-dialog-title>Book {{ booking.serviceName }}</h2>
+  
+  <mat-dialog-content>
+    <form #bookingForm="ngForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="booking.clientName" name="clientName" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Vehicle Number</mat-label>
+        <input matInput [(ngModel)]="booking.vehicleNumber" name="vehicleNumber" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input matInput [(ngModel)]="booking.phoneNumber" name="phoneNumber" required
+               pattern="[0-9]{10}" placeholder="10-digit number">
+      </mat-form-field>
+      
+      <mat-form-field appearance="outline">
+        <mat-label>Appointment Date</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="booking.appointmentDate" 
+               name="appointmentDate" required [min]="minDate" [matDatepickerFilter]="dateFilter">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      
+
+      <!-- <mat-form-field appearance="outline">
+        <mat-label>Appointment Date</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="booking.appointmentDate" 
+               name="appointmentDate" required [min]="minDate" [matDatepickerFilter]="dateFilter">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field> -->
+
+      <div class="total-amount">
+        <span>Total Amount:</span>
+        <span class="amount">₹{{ booking.totalAmount }}</span>
+      </div>
+    </form>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="onSubmit()" 
+            [disabled]="!bookingForm.form.valid">
+      Confirm Booking
+    </button>
+  </mat-dialog-actions>
+</div> 

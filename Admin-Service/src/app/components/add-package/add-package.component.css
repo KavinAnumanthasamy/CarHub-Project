@@ -1,0 +1,159 @@
+/* Page Container */
+.page-container {
+  padding: 80px 40px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Form Container */
+.package-form {
+  max-width: 800px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 40px 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Form Hover Effect */
+.package-form:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+/* Header Section */
+.header-section {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.header-section h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.header-section p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-top: 6px;
+  transition: border 0.3s ease;
+}
+
+/* Input Focus Effect */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00c6ff; /* Blue focus border */
+  outline: none;
+}
+
+/* Textarea Styling */
+textarea {
+  min-height: 120px;
+}
+
+/* Error and Success Messages */
+.error-message,
+.success-message {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.error-message {
+  background-color: #e74c3c; /* Red for errors */
+}
+
+.success-message {
+  background-color: #27ae60; /* Green for success */
+}
+
+/* Services Group */
+.services-group h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.service-option {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.service-option:hover {
+  background: #ecf0f1;
+  border-color: #00c6ff; /* Blue hover border */
+}
+
+/* Service Checkbox */
+.service-option input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Total Price */
+.total-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0072ff; /* Blue color for total price */
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 25px;
+  background:#0072ff; /* Blue button */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+button:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+}

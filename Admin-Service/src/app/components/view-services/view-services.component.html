@@ -1,0 +1,53 @@
+<div class="page-container">
+  <div class="services-container">
+    <div class="header-section">
+      <h2 class="section-title">Available Services</h2>
+      <p class="section-subtitle">Manage your service offerings</p>
+    </div>
+
+    <!-- Loading State -->
+    <div class="loading-container" *ngIf="isLoading">
+      <div class="spinner"></div>
+      <p>Loading services...</p>
+    </div>
+
+    <!-- Error Message -->
+    <div class="error-message" *ngIf="errorMessage">
+      {{ errorMessage }}
+      <button class="btn btn-primary retry-button" (click)="loadServices()">
+        Retry
+      </button>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="services-grid" *ngIf="!isLoading && !errorMessage && services.length > 0">
+      <div class="service-card" *ngFor="let service of services">
+        <div class="service-header">
+          <h3 class="service-title">{{service.name}}</h3>
+          <div class="service-actions">
+            <button class="btn btn-sm btn-outline-primary edit-btn">
+              <i class="fas fa-edit"></i> Edit
+            </button>
+            <button class="btn btn-sm btn-outline-danger delete-btn" (click)="deleteService(service.id!)">
+              <i class="fas fa-trash"></i> Delete
+            </button>
+          </div>
+        </div>
+        
+        <p class="service-description">{{service.description}}</p>
+        
+        <div class="service-footer">
+          <span class="service-price">₹{{service.price}}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- No Services Message -->
+    <div class="no-services" *ngIf="!isLoading && !errorMessage && services.length === 0">
+      <p>No services available. Start by adding a new service.</p>
+      <a routerLink="/add-service" class="btn btn-primary">
+        <i class="fas fa-plus"></i> Add Service
+      </a>
+    </div>
+  </div>
+</div> 

@@ -1,0 +1,55 @@
+<div class="page-container">
+  <div class="catalog-container">
+    <div class="header-section">
+      <h2 class="section-title">Our Premium Car Services</h2>
+      <p class="section-subtitle">Choose from our carefully curated service packages</p>
+    </div>
+    
+    <!-- Loading State -->
+    <div class="loading-container" *ngIf="isLoading">
+      <div class="spinner"></div>
+      <p>Loading packages...</p>
+    </div>
+
+    <!-- Error Message -->
+    <div class="error-message" *ngIf="errorMessage">
+      {{ errorMessage }}
+      <button class="btn btn-primary retry-button" (click)="loadPackages()">
+        Retry
+      </button>
+    </div>
+
+    <div class="packages-grid" *ngIf="!isLoading && !errorMessage && packages.length > 0">
+      <div class="package-card" *ngFor="let package of packages">
+        <div class="package-header">
+          <h3 class="package-title">{{package.name}}</h3>
+          <span class="package-duration">Duration: {{package.duration}} hours</span>
+        </div>
+        
+        <p class="package-description">{{package.description}}</p>
+        
+        <div class="services-container">
+          <h4 class="services-title">Included Services:</h4>
+          <ul class="services-list">
+            <li class="service-item" *ngFor="let service of package.services">
+              <span class="service-name">{{service.name}}</span>
+              <span class="service-price">₹{{service.price}}</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="package-footer">
+          <div class="total-price">Total: ₹{{package.totalPrice}}</div>
+          <button class="btn btn-primary book-button" (click)="bookNow(package)">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- No Packages Message -->
+    <div class="no-packages" *ngIf="!isLoading && !errorMessage && packages.length === 0">
+      <p>No service packages available at the moment.</p>
+    </div>
+  </div>
+</div> 
